@@ -7,17 +7,36 @@
 
 ---
 
+## Inspiration & Need
+
+ALADIN is inspired by the legendary figure **Aladdin**, who discovers a magical lamp that instantly grants his wishes. Similarly, this project acts as a “magic lamp” for developers and students:
+
+- Provide a **task brief** or “wish”.
+- ALADIN automatically **generates the project** using LLMs.
+- Handles **deployment, GitHub commits, and notifications** automatically.
+
+#### Why This Project is Needed
+
+Developers and students often spend time on repetitive, mundane tasks:
+
+1. Writing boilerplate code from scratch.
+2. Managing Git commits and pushes.
+3. Deploying projects manually to GitHub or GitHub Pages.
+4. Sending project details to evaluators or collaborators.
+
+ALADIN automates these steps, saving time, ensuring consistency, and allowing users to focus on **learning and creativity** rather than execution.
+
+---
+
 ## Project Description
 
-**ALADIN** (Automated LLM Deployment and Integration Network) is a system that automates the generation of code via LLMs and deploys it automatically to GitHub.
+**ALADIN** (Automated LLM Deployment and Integration Network) automates code generation and deployment to GitHub. It allows users to submit tasks, attachments, and instructions to a FastAPI server, which:
 
-It allows students or developers to submit tasks, attachments, and instructions to a FastAPI server, which:
-
-- Generates a project based on the brief
-- Saves attachments
-- Commits and pushes the project to GitHub
-- Enables GitHub Pages if applicable
-- Notifies an evaluation endpoint with repository details
+- Generates a project based on the brief.
+- Saves attachments.
+- Commits and pushes the project to GitHub.
+- Enables GitHub Pages if applicable.
+- Notifies an evaluation endpoint with repository details.
 
 ---
 
