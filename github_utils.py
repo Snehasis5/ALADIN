@@ -12,6 +12,8 @@ import subprocess
 subprocess.run(["git", "config", "--global", "user.name", "Snehasis5"], check=True)
 subprocess.run(["git", "config", "--global", "user.email", "snehasismukhopadhyay356@gmail.com"], check=True)
 
+os.environ["GIT_EDITOR"] = "true"
+
 GITHUB_API = "https://api.github.com"
 
 
