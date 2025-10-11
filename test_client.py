@@ -5,8 +5,8 @@ import json
 # -----------------------------
 # Config
 # -----------------------------
-STUDENT_API = "http://127.0.0.1:8000/api-endpoint"
-EVALUATION_URL = "http://127.0.0.1:8000/eval-mock"
+STUDENT_API = "https://aladin-1c8r.onrender.com/api-endpoint"
+EVALUATION_URL = "https://aladin-1c8r.onrender.com/eval-mock"
 
 # -----------------------------
 # Optional attachment: example markdown input (can remove if not needed)
