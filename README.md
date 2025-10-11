@@ -91,6 +91,7 @@ pip install -r requirements.txt
 export GITHUB_TOKEN="your_github_token"
 export GITHUB_OWNER="your_github_username_or_org"
 export API_SECRET_MAP="./secrets_map.json"
+export LLM_API_KEY="you_llm_api_key"
 ```
 
 - **Windows PowerShell:**
@@ -99,6 +100,7 @@ export API_SECRET_MAP="./secrets_map.json"
 $env:GITHUB_TOKEN="your_github_token"
 $env:GITHUB_OWNER="your_github_username_or_org"
 $env:API_SECRET_MAP="./secrets_map.json"
+$env:LLM_API_KEY="you_llm_api_key"
 ```
 
 ---
