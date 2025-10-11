@@ -6,6 +6,11 @@ import shutil
 from pathlib import Path
 from github import Github, GithubException
 import requests
+import subprocess
+
+# Ensure Git identity is set inside Render container
+subprocess.run(["git", "config", "--global", "user.name", "Snehasis5"], check=True)
+subprocess.run(["git", "config", "--global", "user.email", "snehasismukhopadhyay356@gmail.com"], check=True)
 
 GITHUB_API = "https://api.github.com"
 
