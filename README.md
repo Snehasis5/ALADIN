@@ -58,13 +58,66 @@ git clone https://github.com/Snehasis5/ALADIN.git
 cd ALADIN
 git clone https://github.com/Snehasis5/ALADIN.git
 cd ALADIN
-'''
+```
 
 2. Create a virtual environment:
-'''bash
+```bash
 python -m venv venv
 # Linux/Mac
 source venv/bin/activate
 # Windows
+```
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Configure environment variables:
+```bash
+export GITHUB_TOKEN="your_github_token"
+export GITHUB_OWNER="your_github_username_or_org"
+export API_SECRET_MAP="./secrets_map.json"
+
+
+// For Windows PowerShell, use $env:GITHUB_TOKEN="your_github_token" instead of export.
+```
+Usage
+
+Start the FastAPI server:
+```
+uvicorn server:app --host 0.0.0.0 --port 8000
+```
+
+Send a POST request to /api-endpoint with a task brief, attachments, and secret. Example using curl:
+```
+curl -X POST http://127.0.0.1:8000/api-endpoint \
+-H "Content-Type: application/json" \
+-d '{
+  "email": "student@example.com",
+  "secret": "your_secret_key",
+  "task": "sum-of-sales",
+  "round": 1,
+  "nonce": "random_nonce",
+  "brief": "Generate a single-page site that sums sales from a CSV.",
+  "evaluation_url": "http://example.com/eval",
+  "attachments": [
+    {
+      "name": "data.csv",
+      "url": "data:text/csv;base64,..."
+    }
+  ]
+}'
+```
+What happens next
+
+The server generates the project based on your brief.
+
+Saves any attachments provided.
+
+Commits and pushes the project to GitHub automatically.
+
+Enables GitHub Pages (if applicable).
+
+Notifies the evaluation URL with repository details.
 venv\Scripts\activate
 '''
