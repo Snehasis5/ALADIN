@@ -1,6 +1,6 @@
 # ALADIN
 
-![ALADIN Logo](./logo.png)
+![ALADIN Logo](./ALADIN_logo.png)
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Snehasis5/ALADIN)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
