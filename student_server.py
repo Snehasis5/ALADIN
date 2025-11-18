@@ -231,3 +231,22 @@ async def api_endpoint(req: TaskRequest):
 async def eval_mock(payload: dict = Body(...)):
     print("[mock-eval] Received callback:", payload)
     return {"status": "ok"}
+
+# Add this at the end of your file, before any other endpoint definitions
+@app.get("/")
+async def root():
+    return {
+        "message": "Student competition server is running!",
+        "status": "active",
+        "service": "Aladin",
+        "github_owner": GITHUB_OWNER,
+        "endpoints": {
+            "competition": "POST /api-endpoint",
+            "mock_eval": "POST /eval-mock"
+        }
+    }
+
+# Add a health check endpoint too
+@app.get("/health")
+async def health():
+    return {"status": "healthy", "service": "student_server"}
